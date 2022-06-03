@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+
+    <script>
+      function receive(){
+
+        var i_date = document.getElementById("date").value;
+        var i_investment = document.getElementById("investment").value;
+        var principal = document.getElementById("investment").value;
+        var i_period = document.getElementById("period").value;
+        var i_rate = document.getElementById("rate").value;
+
+
+        var html = "<table border = 1><tr align = center><td width = 50>기간</td><td width = 100>수익</td><td width = 120>총 금액</td><td width = 100>수익률</td></tr>"
+
+
+
+        for(var i = 1; i <= i_period; i++ ){
+
+          var revenue = i_investment * (i_rate/100);
+          var i_investment = i_investment * (1 + i_rate/100)
+          var i_yield = 100 * (i_investment/principal-1);
+
+          var html = html + '<tr align=center><td>' + i + i_date + '</td>' + '<td align=right>' + parseInt(revenue).toLocaleString() + '</td>' + '<td align=right>' + parseInt(i_investment).toLocaleString() + '</td>'
+          + '<td align=right>' + parseInt(i_yield).toLocaleString() + "%" + '</td></tr>';
+        }
+        var html = html +  '</table>';
+        document.getElementById("target").innerHTML = html;
+      }
+    </script>
+
+  </head>
+  <body>
+    <h1>SMG-Stocklife</h1>
+    <h2>복리계산기</h2>
+    <p>투자원금:
+    <input type="text" id="investment">
+    원</p>
+    <p style="margin-left: 33px;">계산기간:
+    <input type="text" id="period" maxlength="999">
+    <select id = "date">
+      <option value="일">일</option>
+      <option value="주">주</option>
+      <option value="개월">개월</option>
+    </select></p>
+    <p>목표수익률:
+    <input type="text" id="rate"> (%)</p>
+    <div id="cal">
+      <input type="button" value="계산" style="width:500px" onclick="
+        receive();
+      ">
+    </div>
+    <div id="target">
+
+    </div>
+  </body>
+</html>
