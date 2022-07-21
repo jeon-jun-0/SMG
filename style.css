@@ -14,15 +14,15 @@ body{
   margin:0;
 }
 
+p {
+  text-align: center;
+  padding: 20px;
+}
+
 #cal{
   margin: auto;
   width: 500px;
   display: block;
-}
-
-p {
-  text-align: center;
-  padding: 20px;
 }
 
 #target {
@@ -31,6 +31,12 @@ p {
   margin-right: 300px;
   margin-top: 50px;
   margin-bottom: 150px;
+}
+
+#draw{
+  width:20vw;
+  margin: auto;
+  display: block;
 }
 
 #cal {
