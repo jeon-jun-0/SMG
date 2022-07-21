@@ -1,5 +1,5 @@
 h1 {
-  font-size: 60px;
+  font-size: 10vw;
   text-align: center;
   border-bottom: 3px solid black;
   margin: 0;
@@ -7,7 +7,7 @@ h1 {
 }
 
 h2 {
-  font-size:40px;
+  font-size:5vw;
   text-align: center;
 }
 body{
@@ -27,8 +27,8 @@ p {
 
 #target {
   display: grid;
-  margin-left: 300px;
-  margin-right: 300px;
+  margin-left: 20vw;
+  margin-right: 20vw;
   margin-top: 50px;
   margin-bottom: 150px;
 }
