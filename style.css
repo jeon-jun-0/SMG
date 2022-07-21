@@ -34,13 +34,8 @@ p {
 }
 
 #draw{
-  width:20vw;
-  margin: auto;
-  display: block;
-}
-
-#cal {
   width:30vw;
   margin: auto;
   display: block;
 }
+
